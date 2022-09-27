@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApp1
+{
+    internal class Class1
+    {
+        SqlConnection bd = new SqlConnection(@"Data Sourse=DESKTOP-4A51GFO;Initial Catalog=Test1;Integrated Security=True");
+
+        public void OpenConnection()
+        { 
+            if(bd.State == System.Data.ConnectionState.Closed)
+            {
+                bd.Open();
+            }
+        }
+        public void CloseConnection()
+        {
+            if (bd.State == System.Data.ConnectionState.Open)
+            {
+                bd.Close();
+            }
+        }
+
+        public SqlConnection getConnection()
+        {
+            return bd;
+        }
+    }
+}
