@@ -1,0 +1,8 @@
+CREATE TRIGGER ZapolneniyeStudent
+ON Student
+AFTER INSERT 
+AS
+BEGIN
+INSERT Invalidnost(id_student, status_invalidnost) VALUES ((SELECT MAX(id) FROM Student), '0');
+INSERT FormaObucheniyaStudent(id_student) VALUES ((SELECT MAX(id) FROM Student));
+END;

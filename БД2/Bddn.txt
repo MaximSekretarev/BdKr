@@ -1,0 +1,8 @@
+INSERT Spetsialnost (nazvaniye, kod) VALUES ('Программист C#', '02.32.12'), ('Программист C++', '43.54.13'), ('Программист Python', '52.33.99'), ('Программист Java', '55.38.13'), ('Программист JS', '52.33.00');
+INSERT Dolzhnost (name_dolzhnost) VALUES ('Преподаватель C++'), ('Преподаватель C#'), ('Преподаватель Python'), ('Преподаватель Java'), ('Преподаватель Js');
+INSERT Sotrudnik (id_dolzhnost, imya, familiya, otchestvo, email, telefon, data_rozhdeniya) VALUES (1,'Рыжов',  'Даниил', 'Кириллович', '1@dd.ru', '+79999999999', null), (2, 'Еремин',  'Арсений', 'Константинович', '2@dd.ru', '+79999999991', null), (3, 'Афанасьева',  'Алиса', 'Александровна', '3@dd.ru', '+79999999993', null), (4, 'Андреев',  'Даниэль', 'Егорович', '4@dd.ru', '+79999999937', null), (5, 'Савельева',  'Мария', 'Мироновна', '5@dd.ru', '+79999999432', null);
+INSERT Gruppa (id_spetsialnost, id_kurator, kurs, name_gruppa) VALUES (1, 1, 1,'PrC++'), (2, 2, 1,'PrC#'), (3, 3, 1,'PrPy'), (4, 4, 1,'PrJ'), (5, 5, 1,'PrJS');
+INSERT Predmet (nazvaniye) VALUES ('Программирование C#'), ('Программирование C++'), ('Программирование Python'), ('Программирование JAVA'), ('Программирование JS');
+INSERT SemeynoyePolozheniye (vid) VALUES ('многодетная семья'), ('обычная');
+INSERT FormaObucheniya (forma_obucheniya) VALUES ('бюджет'), ('платник');
+INSERT PredmetGruppa (id_prepodavatel, id_gruppa, id_predmet, vremya) VALUES (1, 1, 1, 100), (2, 2, 2, 50), (3, 3, 3, 10), (4, 4, 4, 150), (5, 5, 5, 20);
